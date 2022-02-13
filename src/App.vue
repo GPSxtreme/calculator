@@ -1,7 +1,7 @@
 <template>
   <h1></h1>
   <div class="output">
-    <div class="outputCalc">{{ calculatorValue }}</div>
+    <div class="outputCalc">{{ calculatorValue || 0 }}</div>
   </div>
   <div class="buttons">
     <div
@@ -51,6 +51,8 @@ export default {
         "0",
         ".",
       ],
+      operator: null,
+      previousCalculatorValue: "",
     };
   },
   methods: {
